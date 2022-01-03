@@ -76,15 +76,58 @@ body{
     margin: 3.5px 0;
     transition: all .6s , background .3s
 }
-.links:hover .icon span{
+.links:hover .icon span, .links .icon.active span{
     background-color: var(--main-color) ;
 }
-.links:hover .icon span:nth-child(2){width: 100%;}
-.links:hover ul{display: block;}
+.links:hover .icon span:nth-child(2), 
+.links .icon.active span:nth-child(2){width: 100%;}
+
 .links .icon span:nth-child(2){
     width: 70%;
 }
-.links ul{
+.links:hover ul{display: block;}
+.links .bar{
+    display: none;
+    padding: 30px;
+    background: #2C4755;
+    color: #fff;
+    position: absolute;
+    right: 0;
+    min-width: 273px;
+}
+.links .bar > .exit{
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.links .bar > i.fa-times:hover{color: var(--main-color)}
+.links .bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 10px;
+}
+.links .bar a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.6;
+    font-size: 20px;
+}
+.links .bar a:hover{
+    color: var(--main-color)
+}
+.links .bar a.active{color: var(--main-color)}
+.links .bar > div{
+    padding-bottom: 20px;
+}
+.links .bar > div > span{
+    color: #637988;
+    font-size: 20px;
+}
+
+/* .links ul{
     display: none;
     list-style: none;
     width: 200px;
@@ -125,7 +168,7 @@ body{
 }
 .links ul li:not(:last-child) a{
     border-bottom: 1px solid #ddd;
-}
+} */
 /* end header */
 
 /* star landing */

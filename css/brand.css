@@ -1,0 +1,106 @@
+
+/* star landing */
+.main{
+    background: url(../images/des.jpg) center;
+    background-size: cover;
+    padding: 60px 0;
+}
+.main .head{
+    width: 81%;
+    margin: 50px auto;
+    padding: 20px 0 20px 64px;
+    background: #fff;
+    border-radius: 3px;
+}
+.main .head p{
+    text-transform: uppercase;
+    color: #575757;
+    font-size: 18px;
+}
+.main .head h2{
+    color: var(--main-color);
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    margin: 20px 0;
+}
+/* end landing */
+
+/* star description */
+.desc{padding: 60px 0;}
+.desc .content{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.desc .content .text{
+    padding: 0 30px;
+    flex-basis: 60%;
+    margin: 40px 0;
+}
+@media (max-width: 992px){
+    .desc .content .text{
+        flex-basis: 100%;
+    }
+}
+.desc .content .text h3{
+    color: #334752;
+    line-height: 1.7;
+}
+.desc .content .text hr{
+    background-color: var(--main-color);
+    width: 60%;
+    height: 3px;
+    margin: 34px 0 0;
+    border: none;
+}
+.desc .content .text p{
+    color: #575757;
+    line-height: 1.6;
+}
+.desc .content .data{
+    flex-basis: 260px;
+    padding: 30px 20px;
+    max-width: 420px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%),
+     0 1px 5px 0 rgb(0 0 0 / 12%), 
+     0 3px 1px -2px rgb(0 0 0 / 20%);
+}
+.desc .content .data .box{
+    padding: 5px 30px ;
+}
+
+/* end description */
+
+/* star project */
+.project .box{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+.project .box > *{
+    flex-basis: 50%;
+    padding: 40px 0;
+}
+.project .box .text {
+    padding: 40px 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.project .box .text p {
+    line-height: 1.6;
+    
+}
+.project .box img{
+    max-width: 100%;
+}
+@media (max-width: 992px){
+    .project .box{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/* end project */
+
