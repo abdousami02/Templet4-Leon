@@ -42,6 +42,9 @@ body{
     margin: -28px 0 20px ;
     text-align: center;
 }
+.clearFix{
+    clear: both;
+}
 /* end components */
 
 /* star header */
@@ -64,9 +67,9 @@ body{
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    height: 30px;
-    width: 30px;
+    width: 40px;
     cursor: pointer;
+    padding: 5px;
 }
 
 .links .icon span{
@@ -126,49 +129,6 @@ body{
     color: #637988;
     font-size: 20px;
 }
-
-/* .links ul{
-    display: none;
-    list-style: none;
-    width: 200px;
-    margin: 0;
-    position: absolute;
-    background: #f8f8f8;
-    padding-left:0;
-    right: 0;
-    top: calc(100% + 10px);
-    box-shadow: 
-     0 2px 2px 0 rgb(0 0 0 / 14%),
-     0 1px 5px 0 rgb(0 0 0 / 12%),
-     0 3px 1px -2px rgb(0 0 0 / 20%);
-     z-index: 2;
-}
-.links ul::before{
-    display: inline-block;
-    content: "";
-    border: 10px solid transparent;
-    border-bottom: 10px solid #eee;
-    position: absolute;
-    top: -20px;
-    right: 15px;
-}
-
-.links ul li a{
-    display: block;
-    padding: 15px;
-    color: #777;
-    text-decoration: none;
-    font-size: 20px;
-    transition: .5s
-}
-.links ul li a:hover{
-    padding-left: 25px;
-    color: var(--main-color);
-    background: #ececec
-}
-.links ul li:not(:last-child) a{
-    border-bottom: 1px solid #ddd;
-} */
 /* end header */
 
 /* star landing */
@@ -335,17 +295,107 @@ body{
     line-height: 1.7;
     margin-bottom:0;
 }
-.portfolio .show button{
+.portfolio .show a{
     display: block;
     margin: auto;
+    width: fit-content;
     padding: 10px 20px;
-    background: none;
+    text-decoration: none;
     border: 2px solid var(--main-color);
     font-size: 17px;
     cursor: pointer;
     color: var(--main-color);
 }
+.portfolio .show a:hover{
+    background: var(--main-color);
+    color: #fff;
+}
 /* end portfolio */
+
+/* star time line */
+.timeLine{
+    padding: 60px 0; 
+    background-color: #eee;
+}
+.timeLine .timeLine-content{
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+.timeLine .timeLine-content::before{
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+    background: var(--main-color);
+}
+.timeLine .year{
+    width: fit-content;
+    padding: 5px 10px;
+    margin: 20px auto;
+    color: #fff;
+    background: var(--main-color);
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+
+}
+.timeLine .content{
+    padding: 20px;
+    background: #fff;
+    width: calc(50% - 25px);
+    margin: 10px 0;
+    border-radius: 7px;
+    position: relative;
+}
+.timeLine .content::before{
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 20px;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+    background: #fff;
+}
+.timeLine .content.left::before{
+    right: -35px;
+}
+.timeLine .content.right::before{
+    left: -35px
+}
+.timeLine .content::after{
+    content: '';
+    position: absolute;
+    border: 10px solid transparent;
+    top: 20px;
+}
+.timeLine .content.left::after{
+    border-left-color: #fff;
+    right: -20px
+}
+.timeLine .content.right::after{
+    border-right-color: #fff;
+    left: -20px
+}
+.timeLine .content.left{
+    float: left;
+}
+.timeLine .content.right{
+    float: right;
+}
+.timeLine .content h3{
+    color: var(--main-color)
+}
+.timeLine .content p{
+    color: #777;
+    line-height: 1.7;
+}
+/* end time line */
 
 /* star about */
 .about{
